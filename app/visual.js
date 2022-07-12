@@ -46,7 +46,7 @@ class Visual {
   }
 
   static async compare(browser, os, size, screenshot, file) {
-    const filename = `${file}/${os}_${browser}_${size.width}_${size.height}.png`
+    const filename = `${file}/${os.toLowerCase()}_${browser}_${size.width}_${size.height}.png`
     if (config.capture === 'true' || config.capture === true) {
       Visual.capture(screenshot, filename)
     }
